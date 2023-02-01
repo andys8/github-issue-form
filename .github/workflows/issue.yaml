@@ -12,10 +12,10 @@ on:
 jobs:
   update_library:
     runs-on: ubuntu-latest
-    name: Convert New built-with-eleventy Issue to Sites Data
-    # only continue if issue has "built-with-eleventy" label
+    name: Convert New issue Issue to Sites Data
+    # only continue if issue has "issue" label
     # require an `approved` label for moderation
-    if: contains( github.event.issue.labels.*.name, 'built-with-eleventy') && contains( github.event.issue.labels.*.name, 'approved')
+    if: contains( github.event.issue.labels.*.name, 'issue') && contains( github.event.issue.labels.*.name, 'approved')
     steps:
       - name: Checkout
         uses: actions/checkout@v3
